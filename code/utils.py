@@ -18,8 +18,8 @@ def fix_randomness(SEED):
     random.seed(SEED)
     np.random.seed(SEED)
     torch.manual_seed(SEED)
-    # torch.cuda.manual_seed(SEED)
-    # torch.backends.cudnn.deterministic = True
+    torch.cuda.manual_seed(SEED)
+    torch.backends.cudnn.deterministic = True
 
 
 def epoch_time(start_time, end_time):

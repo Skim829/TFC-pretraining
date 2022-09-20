@@ -124,7 +124,7 @@ class NTXentLoss_poly(torch.nn.Module):
         """Criterion has an internal one-hot function. Here, make all positives as 1 while all negatives as 0. """
         labels = torch.zeros(2 * self.batch_size).to(self.device).long()
         CE = self.criterion(logits, labels)
-
+        
         onehot_label = torch.cat((torch.ones(2 * self.batch_size, 1),torch.zeros(2 * self.batch_size, negatives.shape[-1])),dim=-1).to(self.device).long()
         # Add poly loss
         pt = torch.mean(onehot_label* torch.nn.functional.softmax(logits,dim=-1))

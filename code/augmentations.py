@@ -114,27 +114,14 @@ def permutation(x, max_segments=5, seg_mode="random"):
             ret[i] = pat
     return torch.from_numpy(ret)
 
-# def remove_frequency(x, maskout_ratio=0):
-#     mask = torch.cuda.FloatTensor(x.shape).uniform_() > maskout_ratio # maskout_ratio are False
-#     mask = mask.to(x.device)
-#     return x*mask
-
-# def add_frequency(x, pertub_ratio=0,):
-
-#     mask = torch.cuda.FloatTensor(x.shape).uniform_() > (1-pertub_ratio) # only pertub_ratio of all values are True
-#     mask = mask.to(x.device)
-#     max_amplitude = x.max()
-#     random_am = torch.rand(mask.shape)*(max_amplitude*0.1)
-#     pertub_matrix = mask*random_am
-#     return x+pertub_matrix
-
-def remove_frequency(x, maskout_ratio=0, ):
-    mask = torch.FloatTensor(x.shape).uniform_() > maskout_ratio # maskout_ratio are False
+def remove_frequency(x, maskout_ratio=0):
+    mask = torch.cuda.FloatTensor(x.shape).uniform_() > maskout_ratio # maskout_ratio are False
     mask = mask.to(x.device)
     return x*mask
 
-def add_frequency(x, pertub_ratio=0, ):
-    mask = torch.FloatTensor(x.shape).uniform_() > (1-pertub_ratio) # only pertub_ratio of all values are True
+def add_frequency(x, pertub_ratio=0,):
+
+    mask = torch.cuda.FloatTensor(x.shape).uniform_() > (1-pertub_ratio) # only pertub_ratio of all values are True
     mask = mask.to(x.device)
     max_amplitude = x.max()
     random_am = torch.rand(mask.shape)*(max_amplitude*0.1)
