@@ -13,7 +13,8 @@ from sklearn.metrics import roc_auc_score, classification_report, confusion_matr
     average_precision_score, accuracy_score, precision_score,f1_score,recall_score
 from sklearn.neighbors import KNeighborsClassifier
 
-from models.loss import * #NTXentLoss, NTXentLoss_poly
+# from models.loss import * #NTXentLoss, NTXentLoss_poly
+from loss import *
 
 def one_hot_encoding(X):
     X = [int(x) for x in X]
@@ -147,8 +148,9 @@ def model_pretrain(model, temporal_contr_model, model_optimizer, temp_cont_optim
 
         l_TF = nt_xent_criterion(z_t, z_f)
         l_1, l_2, l_3 = nt_xent_criterion(z_t, z_f_aug), nt_xent_criterion(z_t_aug, z_f), nt_xent_criterion(z_t_aug, z_f_aug)
+        print(l_TF)
         loss_c = (1+ l_TF -l_1) + (1+ l_TF -l_2) + (1+ l_TF -l_3)
-
+        print(loss_c)
         lam = 0.2
         loss = lam *(loss_t + loss_f) + (1- lam)*loss_c
 

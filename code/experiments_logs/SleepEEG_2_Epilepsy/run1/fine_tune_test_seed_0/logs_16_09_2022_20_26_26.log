@@ -1,0 +1,58 @@
+=============================================
+Pre-training Dataset: SleepEEG
+Target (fine-tuning) Dataset: Epilepsy
+Method:  Time-Freq Consistency
+Mode:    fine_tune_test
+=============================================
+Data loaded ...
+Training started ....
+
+Epoch : 1
+finetune Loss  : 5.2661	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.4917 	 |finetune PRC: 0.4928 
+
+Test on Target datasts test set
+
+Epoch : 2
+finetune Loss  : 5.4208	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.5856 	 |finetune PRC: 0.5989 
+
+Test on Target datasts test set
+
+Epoch : 3
+finetune Loss  : 5.2805	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.5344 	 |finetune PRC: 0.6052 
+
+Test on Target datasts test set
+
+Epoch : 4
+finetune Loss  : 5.4759	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.5811 	 |finetune PRC: 0.5974 
+
+Test on Target datasts test set
+
+Epoch : 5
+finetune Loss  : 5.3475	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.6817 	 |finetune PRC: 0.6968 
+
+Test on Target datasts test set
+
+Epoch : 6
+finetune Loss  : 5.2096	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.7261 	 |finetune PRC: 0.7423 
+
+Test on Target datasts test set
+
+Epoch : 7
+finetune Loss  : 5.3380	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.7633 	 |finetune PRC: 0.7573 
+
+Test on Target datasts test set
+
+Epoch : 8
+finetune Loss  : 5.4322	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.8428 	 |finetune PRC: 0.8270 
+
+Test on Target datasts test set
+
+Epoch : 9
+finetune Loss  : 5.2679	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.8011 	 |finetune PRC: 0.8350 
+
+Test on Target datasts test set
+
+Epoch : 10
+finetune Loss  : 5.1091	 | 	finetune Accuracy : 0.5000	 | 	finetune AUC : 0.7956 	 |finetune PRC: 0.7940 
+
+Test on Target datasts test set

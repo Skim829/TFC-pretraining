@@ -18,8 +18,8 @@ def fix_randomness(SEED):
     random.seed(SEED)
     np.random.seed(SEED)
     torch.manual_seed(SEED)
-    torch.cuda.manual_seed(SEED)
-    torch.backends.cudnn.deterministic = True
+    # torch.cuda.manual_seed(SEED)
+    # torch.backends.cudnn.deterministic = True
 
 
 def epoch_time(start_time, end_time):
@@ -83,15 +83,28 @@ def _logger(logger_name, level=logging.DEBUG):
 
 
 
+# def copy_Files(destination, data_type):
+#     # destination: 'experiments_logs/Exp1/run1'
+#     destination_dir = os.path.join(destination, "model_files")
+#     os.makedirs(destination_dir, exist_ok=True)
+#     copy("main.py", os.path.join(destination_dir, "main.py"))
+#     copy("trainerfun/trainer.py", os.path.join(destination_dir, "trainerfun.py"))
+#     copy(f"config_files/{data_type}_Configs.py", os.path.join(destination_dir, f"{data_type}_Configs.py"))
+#     copy("dataloader/augmentations.py", os.path.join(destination_dir, "augmentations.py"))
+#     copy("dataloader/dataloader.py", os.path.join(destination_dir, "dataloader.py"))
+#     copy(f"models/model.py", os.path.join(destination_dir, f"model.py"))
+#     copy("models/loss.py", os.path.join(destination_dir, "loss.py"))
+#     copy("models/TC.py", os.path.join(destination_dir, "TC.py"))
+
 def copy_Files(destination, data_type):
     # destination: 'experiments_logs/Exp1/run1'
     destination_dir = os.path.join(destination, "model_files")
     os.makedirs(destination_dir, exist_ok=True)
     copy("main.py", os.path.join(destination_dir, "main.py"))
-    copy("trainerfun/trainer.py", os.path.join(destination_dir, "trainerfun.py"))
+    # copy("trainerfun/trainer.py", os.path.join(destination_dir, "trainerfun.py"))
     copy(f"config_files/{data_type}_Configs.py", os.path.join(destination_dir, f"{data_type}_Configs.py"))
-    copy("dataloader/augmentations.py", os.path.join(destination_dir, "augmentations.py"))
-    copy("dataloader/dataloader.py", os.path.join(destination_dir, "dataloader.py"))
-    copy(f"models/model.py", os.path.join(destination_dir, f"model.py"))
-    copy("models/loss.py", os.path.join(destination_dir, "loss.py"))
-    copy("models/TC.py", os.path.join(destination_dir, "TC.py"))
+    copy("augmentations.py", os.path.join(destination_dir, "augmentations.py"))
+    copy("dataloader.py", os.path.join(destination_dir, "dataloader.py"))
+    copy(f"model.py", os.path.join(destination_dir, f"model.py"))
+    copy("loss.py", os.path.join(destination_dir, "loss.py"))
+    # copy("models/TC.py", os.path.join(destination_dir, "TC.py"))

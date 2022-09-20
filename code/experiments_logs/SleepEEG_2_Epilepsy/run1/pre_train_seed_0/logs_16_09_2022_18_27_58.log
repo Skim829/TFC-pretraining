@@ -1,0 +1,6 @@
+=============================================
+Pre-training Dataset: SleepEEG
+Target (fine-tuning) Dataset: Epilepsy
+Method:  Time-Freq Consistency
+Mode:    pre_train
+=============================================

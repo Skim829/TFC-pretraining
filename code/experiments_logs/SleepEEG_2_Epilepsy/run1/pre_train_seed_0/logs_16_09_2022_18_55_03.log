@@ -1,0 +1,28 @@
+=============================================
+Pre-training Dataset: SleepEEG
+Target (fine-tuning) Dataset: Epilepsy
+Method:  Time-Freq Consistency
+Mode:    pre_train
+=============================================
+Data loaded ...
+Training started ....
+
+Pre-training Epoch : 1
+Train Loss     : 4.4101	 | 	Train Accuracy     : 0.0000	 | 	Train AUC : 0.0000
+
+
+Pre-training Epoch : 2
+Train Loss     : 2.9780	 | 	Train Accuracy     : 0.0000	 | 	Train AUC : 0.0000
+
+
+Pre-training Epoch : 3
+Train Loss     : 0.9503	 | 	Train Accuracy     : 0.0000	 | 	Train AUC : 0.0000
+
+
+Pre-training Epoch : 4
+Train Loss     : -0.7996	 | 	Train Accuracy     : 0.0000	 | 	Train AUC : 0.0000
+
+
+Pre-training Epoch : 5
+Train Loss     : -2.4523	 | 	Train Accuracy     : 0.0000	 | 	Train AUC : 0.0000
+
